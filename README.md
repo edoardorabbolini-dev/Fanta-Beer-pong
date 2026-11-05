@@ -32,6 +32,14 @@ Incolla i valori in `firebase-config.js` al posto di `INCOLLA_QUI`.
 
 Per provarlo in locale: `python3 -m http.server` e apri `http://localhost:8000`.
 
+## Aggiungila alla Home del telefono
+
+Apri il link del sito dal telefono, poi:
+- **iPhone (Safari):** tocca Condividi, poi "Aggiungi alla schermata Home".
+- **Android (Chrome):** tocca i tre puntini, poi "Installa app" (o "Aggiungi a schermata Home").
+
+L'icona 🍺 apre l'app a schermo intero, senza barra del browser. Serve la connessione per leggere e salvare i dati.
+
 ## Squadre
 
 Le 19 squadre sono nell'array `NAMES` all'inizio di `app.js`. Modificalo per cambiare i partecipanti.
@@ -50,4 +58,7 @@ style.css           stile (chiaro e scuro)
 app.js              logica, quote e sincronizzazione
 firebase-config.js  dati del tuo progetto Firebase
 firestore.rules     regole del database
+manifest.webmanifest  nome e icone dell'app installabile
+sw.js               service worker (installazione)
+icon-*.png, apple-touch-icon.png, favicon.png  icone
 ```

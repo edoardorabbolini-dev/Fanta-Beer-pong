@@ -32,6 +32,18 @@ Incolla i valori in `firebase-config.js` al posto di `INCOLLA_QUI`.
 
 Per provarlo in locale: `python3 -m http.server` e apri `http://localhost:8000`.
 
+## Organizzatore (host)
+
+Solo l'organizzatore può creare e chiudere le partite, assegnare il campione, togliere scommettitori e azzerare il torneo.
+Tutti gli altri possono aggiungersi e scommettere.
+
+1. Appena il sito è online, apri Setup > Organizzatore e crea un PIN (almeno 4 caratteri). Il primo PIN creato vale per tutti, quindi fallo tu per primo.
+2. Su ogni altro dispositivo da cui vuoi gestire il torneo, inserisci lo stesso PIN.
+3. Se dimentichi il PIN, elimina il documento `meta/host` da Firestore Database nella console Firebase e creane uno nuovo.
+
+Nota: il PIN protegge l'app, non il database. Le regole in `firestore.rules` restano aperte, quindi chi sa usare gli strumenti
+per sviluppatori potrebbe aggirarlo. Per una serata tra amici basta.
+
 ## Aggiungila alla Home del telefono
 
 Apri il link del sito dal telefono, poi:

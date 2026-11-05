@@ -1,0 +1,7 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Aperto a tutti: pensato per una serata. Cancella il progetto a fine torneo.
+    match /{document=**} { allow read, write: if true; }
+  }
+}
